@@ -1,0 +1,16 @@
+# 部署敏感文件
+infra/**/.env
+infra/**/.htpasswd
+infra/**/node_modules/
+infra/**/public/
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/

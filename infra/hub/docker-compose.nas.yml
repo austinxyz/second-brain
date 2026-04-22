@@ -1,0 +1,34 @@
+services:
+  quartz:
+    image: ${DOCKER_HUB_USER:-austinxyz}/hub-wiki:latest
+    container_name: hub-quartz
+    restart: unless-stopped
+    ports:
+      - "${BIND_IP:-0.0.0.0}:${WEB_PORT:-8080}:8080"
+    volumes:
+      # wealth KB
+      - ${WEALTH_RAW:-/volume1/docker/wealth/content/raw_material}:/app/content/wealth/raw_material:ro
+      - ${WEALTH_WIKI:-/volume1/docker/wealth/content/wiki}:/app/content/wealth/wiki:ro
+      - ${WEALTH_OUTPUT:-/volume1/docker/wealth/content/output}:/app/content/wealth/output:ro
+
+      # job KB
+      - ${JOB_WIKI:-/volume1/docker/job/content/wiki}:/app/content/job/wiki:ro
+
+      # llm KB（待建，注释解开即可启用）
+      # - ${LLM_WIKI:-/volume1/docker/llm/content/wiki}:/app/content/llm/wiki:ro
+    environment:
+      - NODE_ENV=production
+      - TZ=${TZ:-Asia/Shanghai}
+    networks:
+      - hub-net
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"require('http').get('http://localhost:8080', r => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+networks:
+  hub-net:
+    driver: bridge
+    name: hub-wiki-net
