@@ -364,11 +364,11 @@ title: Austin 的第二大脑
     <a class="hub-card-repo" href="https://github.com/austinxyz/tennis-lineup" title="源码仓库">🐙 GitHub</a>
   </div>
 
-  <a class="hub-card" href="#">
+  <a class="hub-card" href="/journal/">
     <div class="hub-card-icon">✍️</div>
-    <div class="hub-card-title">个人博客</div>
-    <div class="hub-card-desc">生活、思考、记录</div>
-    <span class="hub-card-tag tag-wip">待建</span>
+    <div class="hub-card-title">Journal</div>
+    <div class="hub-card-desc">生活感悟 · 旅行 · 访谈 · 设计人生</div>
+    <span class="hub-card-tag">日志</span>
   </a>
 </div>
 
