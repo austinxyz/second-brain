@@ -271,7 +271,7 @@ title: Austin 的第二大脑
 </div>
 
 <div class="hub-grid">
-  <a class="hub-card" href="/wealth/wiki/00-MOC-总览">
+  <a class="hub-card" href="/wealth/output/00-MOC-个人数据">
     <div class="hub-card-icon">💰</div>
     <div class="hub-card-title">财富知识库</div>
     <div class="hub-card-desc">账户类型 · 税务策略 · 退休规划 · 中美对比</div>
@@ -288,11 +288,11 @@ title: Austin 的第二大脑
     <a class="hub-card-repo" href="https://github.com/austinxyz/finance" title="源码仓库">🐙 GitHub</a>
   </div>
 
-  <a class="hub-card" href="#" data-ext>
+  <a class="hub-card" href="/stock/wiki/">
     <div class="hub-card-icon">📊</div>
-    <div class="hub-card-title">Stock</div>
-    <div class="hub-card-desc">股票分析工具，量化策略与回测</div>
-    <span class="hub-card-tag tag-wip">规划中</span>
+    <div class="hub-card-title">股票知识库</div>
+    <div class="hub-card-desc">股票研究 · 量化策略 · 个股笔记</div>
+    <span class="hub-card-tag">知识库</span>
   </a>
 
   <a class="hub-card" href="http://10.0.0.20:2283" data-ext>

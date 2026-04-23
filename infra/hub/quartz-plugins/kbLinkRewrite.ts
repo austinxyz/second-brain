@@ -23,7 +23,7 @@ import type { VFile } from "vfile"
  * 转成 markdown link 之后），CrawlLinks 之前。
  */
 
-const KBS = ["wealth", "job", "llm"] as const
+const KBS = ["wealth", "job", "llm", "stock"] as const
 
 export const KBLinkRewrite: QuartzTransformerPlugin = () => {
   return {

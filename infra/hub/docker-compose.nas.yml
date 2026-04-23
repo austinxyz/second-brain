@@ -20,6 +20,9 @@ services:
       # job KB
       - ${JOB_WIKI:-/volume1/docker/job/content/wiki}:/app/content/job/wiki:ro
 
+      # stock KB
+      - ${STOCK_WIKI:-/volume1/docker/stock/content/wiki}:/app/content/stock/wiki:ro
+
       # llm KB（待建，注释解开即可启用）
       # - ${LLM_WIKI:-/volume1/docker/llm/content/wiki}:/app/content/llm/wiki:ro
     environment:
