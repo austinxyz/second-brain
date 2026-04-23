@@ -39,6 +39,11 @@ services:
       - /volume1/docker/stock/content/wiki:/app/content/stock/wiki:ro
 
       # ─────────────────────────────────────────────
+      # Journal 知识库（私人博客）
+      # ─────────────────────────────────────────────
+      - /volume1/docker/journal/content:/app/content/journal:ro
+
+      # ─────────────────────────────────────────────
       # LLM 知识库（建好后取消注释）
       # ─────────────────────────────────────────────
       # - /volume1/docker/llm/content/wiki:/app/content/llm/wiki:ro
