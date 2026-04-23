@@ -122,6 +122,7 @@ docker compose -f docker-compose.nas.yml up -d
 |---|---|
 | [second-brain](https://github.com/austinxyz/second-brain)（本仓库） | Hub 壳层 + 部署配置 |
 | [wealth](https://github.com/austinxyz/wealth) | 财富 / 投资 / 退休规划 KB |
+| journal（private） | 个人博客 / 感悟 / 旅行 / 访谈 / 设计人生 |
 | job / stock / llm | 各自独立 KB（私有或未公开） |
 
 ## 许可

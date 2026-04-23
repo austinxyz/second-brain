@@ -4,7 +4,7 @@
 
 ## 项目定位
 
-Quartz v4 壳层站点，在 Docker 里嵌入多个独立知识库（wealth / job / stock / llm...），部署在家庭 NAS。
+Quartz v4 壳层站点，在 Docker 里嵌入多个独立知识库（wealth / job / stock / journal / llm...），部署在家庭 NAS。
 详细架构见 [README.md](./README.md)。
 
 ## 核心约束
