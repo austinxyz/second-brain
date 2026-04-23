@@ -14,3 +14,6 @@ Thumbs.db
 
 # Node
 node_modules/
+
+# Claude Code 运行时状态
+.claude/scheduled_tasks.lock

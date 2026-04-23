@@ -15,7 +15,8 @@
       "Bash(mkdir -p .claude/skills/git-commit-push)",
       "Bash(cp /c/Users/lorra/projects/personal/wealth/.claude/skills/git-commit-push/SKILL.md .claude/skills/git-commit-push/)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(bash infra/hub/build-and-push.sh)"
     ]
   }
 }

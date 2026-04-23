@@ -39,35 +39,56 @@ export const KBLinkRewrite: QuartzTransformerPlugin = () => {
           const kbScopedSlugs = allSlugs.filter((s) => s.startsWith(`${kb}/`))
 
           visit(tree, "link", (node: Link) => {
-            const dest = node.url ?? ""
+            const rawDest = node.url ?? ""
             if (
-              !dest ||
-              /^(https?:|mailto:|#|\/)/.test(dest) ||
-              KBS.some((k) => dest.startsWith(`${k}/`))
+              !rawDest ||
+              /^(https?:|mailto:|#|\/)/.test(rawDest) ||
+              KBS.some((k) => rawDest.startsWith(`${k}/`))
             ) {
               return
             }
-            // 单文件名（无 /）交给 "shortest" 全局文件名搜索
-            if (!dest.includes("/")) return
+
+            // 规范化：去掉 .md / .markdown 后缀（Quartz slug 不含扩展名）
+            // 分离锚点和查询串，避免把 #section / ?x=1 弄丢
+            const hashIdx = rawDest.search(/[#?]/)
+            const pathPart = hashIdx >= 0 ? rawDest.slice(0, hashIdx) : rawDest
+            const suffix = hashIdx >= 0 ? rawDest.slice(hashIdx) : ""
+            const dest = pathPart.replace(/\.(md|markdown)$/i, "")
+
+            // 当前文件所在目录，用于相对解析
+            const currentDir = slug.includes("/")
+              ? slug.slice(0, slug.lastIndexOf("/") + 1)
+              : ""
+
+            // 单文件名（无 /）：先按同目录相对解析（Obsidian 默认行为），
+            // 避免带点文件名（如 thesis.zh）被 "shortest" 当成绝对路径
+            if (!dest.includes("/")) {
+              const sameDir = `${currentDir}${dest}`
+              if (allSlugs.includes(sameDir)) {
+                node.url = sameDir + suffix
+              }
+              // 否则留给 "shortest"
+              return
+            }
 
             // 1. 优先在当前 KB 范围内按路径尾匹配
             const kbMatch = kbScopedSlugs.find(
               (s) => s === `${kb}/${dest}` || s.endsWith(`/${dest}`),
             )
             if (kbMatch) {
-              node.url = kbMatch
+              node.url = kbMatch + suffix
               return
             }
 
             // 2. 全局路径尾匹配（处理 KB 之间引用的边角情况）
             const globalMatch = allSlugs.find((s) => s.endsWith(`/${dest}`))
             if (globalMatch) {
-              node.url = globalMatch
+              node.url = globalMatch + suffix
               return
             }
 
             // 3. 兜底：加 KB 前缀（对应文件不存在时，至少链接落在正确的 KB 命名空间下）
-            node.url = `${kb}/${dest}`
+            node.url = `${kb}/${dest}${suffix}`
           })
         },
       ]
