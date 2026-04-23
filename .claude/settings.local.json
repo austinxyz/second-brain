@@ -14,7 +14,8 @@
       "Bash(tee /tmp/hub-build3.log)",
       "Bash(mkdir -p .claude/skills/git-commit-push)",
       "Bash(cp /c/Users/lorra/projects/personal/wealth/.claude/skills/git-commit-push/SKILL.md .claude/skills/git-commit-push/)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }

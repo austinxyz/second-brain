@@ -151,6 +151,42 @@ title: Austin 的第二大脑
     font-size: 0.9rem;
   }
 
+  /* === 双链接卡片（访问地址 + GitHub 源码） === */
+  .hub-card-wrap {
+    position: relative;
+    display: flex;
+  }
+  .hub-card-wrap > .hub-card {
+    flex: 1;
+    padding-bottom: 2.75rem !important;  /* 给底部 GitHub 链接留空间 */
+  }
+  .hub-card-repo {
+    position: absolute;
+    bottom: 0.85rem;
+    right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: rgba(80, 80, 90, 0.12);
+    color: var(--darkgray) !important;
+    text-decoration: none !important;
+    z-index: 2;
+    transition: background 0.15s ease;
+  }
+  .hub-card-repo:hover {
+    background: rgba(80, 80, 90, 0.25);
+  }
+  [saved-theme="dark"] .hub-card-repo {
+    background: rgba(255, 255, 255, 0.08);
+    color: #c0c0c8 !important;
+  }
+  [saved-theme="dark"] .hub-card-repo:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
   /* === 笔记/提示区 === */
   .hub-notes {
     margin: 2rem 0;
@@ -242,12 +278,15 @@ title: Austin 的第二大脑
     <span class="hub-card-tag">130+ 条目</span>
   </a>
 
-  <a class="hub-card" href="http://10.0.0.20:3000" data-ext>
-    <div class="hub-card-icon">📈</div>
-    <div class="hub-card-title">Finance</div>
-    <div class="hub-card-desc">个人财务分析工具，预算追踪、投资组合管理</div>
-    <span class="hub-card-tag tag-ext">编程项目</span>
-  </a>
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="http://10.0.0.20:3000" data-ext>
+      <div class="hub-card-icon">📈</div>
+      <div class="hub-card-title">Finance</div>
+      <div class="hub-card-desc">个人财务分析工具，预算追踪、投资组合管理</div>
+      <span class="hub-card-tag tag-ext">编程项目</span>
+    </a>
+    <a class="hub-card-repo" href="https://github.com/austinxyz/finance" title="源码仓库">🐙 GitHub</a>
+  </div>
 
   <a class="hub-card" href="#" data-ext>
     <div class="hub-card-icon">📊</div>
@@ -291,12 +330,15 @@ title: Austin 的第二大脑
     <span class="hub-card-tag tag-wip">即将建立</span>
   </a>
 
-  <a class="hub-card" href="http://10.0.0.20:3001" data-ext>
-    <div class="hub-card-icon">🌱</div>
-    <div class="hub-card-title">Growing</div>
-    <div class="hub-card-desc">学习，求职</div>
-    <span class="hub-card-tag tag-ext">编程项目</span>
-  </a>
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="http://10.0.0.20:3001" data-ext>
+      <div class="hub-card-icon">🌱</div>
+      <div class="hub-card-title">Growing</div>
+      <div class="hub-card-desc">学习，求职</div>
+      <span class="hub-card-tag tag-ext">编程项目</span>
+    </a>
+    <a class="hub-card-repo" href="https://github.com/austinxyz/growing" title="源码仓库">🐙 GitHub</a>
+  </div>
 
   <a class="hub-card" href="https://austinxyz.github.io/blogs/" data-ext>
     <div class="hub-card-icon">💻</div>
@@ -312,12 +354,15 @@ title: Austin 的第二大脑
 </div>
 
 <div class="hub-grid">
-  <a class="hub-card" href="https://tennis-lineup.fly.dev/" data-ext>
-    <div class="hub-card-icon">🎾</div>
-    <div class="hub-card-title">Tennis</div>
-    <div class="hub-card-desc">网球训练数据记录与分析</div>
-    <span class="hub-card-tag tag-ext">编程项目</span>
-  </a>
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="https://tennis-lineup.fly.dev/" data-ext>
+      <div class="hub-card-icon">🎾</div>
+      <div class="hub-card-title">Tennis</div>
+      <div class="hub-card-desc">网球训练数据记录与分析</div>
+      <span class="hub-card-tag tag-ext">编程项目</span>
+    </a>
+    <a class="hub-card-repo" href="https://github.com/austinxyz/tennis-lineup" title="源码仓库">🐙 GitHub</a>
+  </div>
 
   <a class="hub-card" href="#">
     <div class="hub-card-icon">✍️</div>
