@@ -2,73 +2,345 @@
 title: Austin 的第二大脑
 ---
 
-# 🧠 Austin 的第二大脑
+<style>
+  /* 隐藏默认 H1（hero 自带标题） */
+  article > h1:first-of-type { display: none; }
 
-> 内网知识导航 · 仅限家庭内网访问
+  /* === Hero === */
+  .hub-hero {
+    margin: 1rem 0 2.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--tertiary) 100%);
+    color: white;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+  }
+  .hub-hero::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hub-hero h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: white;
+    border: none;
+    line-height: 1.2;
+  }
+  .hub-hero p {
+    margin: 0;
+    font-size: 1.05rem;
+    opacity: 0.92;
+    font-weight: 300;
+  }
 
----
+  /* === Section header === */
+  .hub-section {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 2.5rem 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+  .hub-section h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0;
+  }
+  .hub-section .hub-section-desc {
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
 
-## 🏠 生活
+  /* === Card grid === */
+  .hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 0 0 1rem;
+  }
+  .hub-card {
+    display: flex !important;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1.5rem !important;
+    min-height: 180px;
+    border: 1px solid var(--lightgray);
+    border-radius: 12px;
+    background: var(--light);
+    text-decoration: none !important;
+    color: var(--dark) !important;
+    transition: all 0.2s ease;
+    position: relative;
+    line-height: 1.5;
+  }
+  .hub-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--secondary);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    background: var(--light);
+  }
+  /* 重置所有子元素的默认 margin，防止各类浏览器/Quartz 默认样式影响对齐 */
+  .hub-card > * {
+    margin: 0;
+  }
+  .hub-card-icon {
+    font-size: 2rem;
+    line-height: 1;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem !important;
+  }
+  .hub-card-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem !important;
+    color: var(--dark);
+  }
+  .hub-card-desc {
+    font-size: 0.85rem;
+    color: var(--darkgray);
+    line-height: 1.5;
+    margin-bottom: 0.75rem !important;
+    flex-grow: 1;  /* 占据剩余空间，把 tag 挤到底部 */
+  }
+  .hub-card-tag {
+    display: inline-block;
+    align-self: flex-start;  /* 不拉伸，靠左 */
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--highlight);
+    color: var(--secondary);
+    font-weight: 500;
+    margin-top: auto !important;  /* flex 下推到底部 */
+  }
+  .hub-card-tag.tag-wip {
+    background: rgba(220, 165, 80, 0.15);
+    color: #b8860b;
+  }
+  .hub-card-tag.tag-ext {
+    background: rgba(120, 120, 200, 0.15);
+    color: var(--secondary);
+  }
+  /* 平台品牌色标签 */
+  .hub-card-tag.tag-juejin   { background: rgba(30, 128, 255, 0.15);  color: #1e80ff; }
+  .hub-card-tag.tag-medium   { background: rgba(0, 171, 108, 0.15);   color: #00ab6c; }
+  .hub-card-tag.tag-linkedin { background: rgba(0, 119, 181, 0.15);   color: #0077b5; }
+  .hub-card-tag.tag-github   { background: rgba(80, 80, 90, 0.2);     color: #4e4e4e; }
+  [saved-theme="dark"] .hub-card-tag.tag-github { color: #c0c0c8; }
 
-家庭财务 · 投资理财 · 照片
+  /* External link 标记 */
+  .hub-card[data-ext]::after {
+    content: "↗";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+  }
 
-| 名称 | 类型 | 简介 |
-|------|------|------|
-| [[wealth/wiki/00-MOC-总览\|💰 财富知识库]] | 知识库 | 账户类型、税务策略、退休规划、中美对比，130+ 条目 |
-| [📈 Finance](https://github.com/austinxyz/finance) | 编程项目 | 个人财务分析工具 |
-| [📊 Stock](#) | 编程项目 | 股票分析工具（规划中）|
-| [🖼️ Immich 照片](http://10.0.0.20:2283) | 媒体 | 家庭照片库 · 内网浏览 |
+  /* === 笔记/提示区 === */
+  .hub-notes {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--highlight);
+    border-left: 3px solid var(--secondary);
+    border-radius: 6px;
+  }
+  .hub-notes h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    border: none;
+  }
+  .hub-notes ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+  }
 
----
+  /* 暗色模式微调 */
+  [saved-theme="dark"] .hub-card {
+    background: rgba(255, 255, 255, 0.03);
+  }
+  [saved-theme="dark"] .hub-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  [saved-theme="dark"] .hub-hero {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+  [saved-theme="dark"] .hub-card-tag.tag-wip {
+    background: rgba(220, 165, 80, 0.2);
+    color: #e0b070;
+  }
+</style>
 
-## 💼 工作
+# Austin 的第二大脑
 
-求职 · 职业规划
+<div class="hub-hero">
+  <h1>🧠 Austin 的第二大脑</h1>
+  <p>家庭内网知识导航 · 思考的延伸 · 工具的总和</p>
+</div>
 
-| 名称 | 类型 | 简介 |
-|------|------|------|
-| [[job/wiki/\|🎯 求职知识库]] | 知识库 | 面试准备、简历优化、谈薪策略 |
+<div class="hub-section">
+  <h2>🌐 我的链接</h2>
+  <span class="hub-section-desc">写作 · 代码 · 职场</span>
+</div>
 
----
+<div class="hub-grid">
+  <a class="hub-card" href="https://juejin.cn/user/2719523382507658/posts" data-ext>
+    <div class="hub-card-icon">💎</div>
+    <div class="hub-card-title">掘金</div>
+    <div class="hub-card-desc">中文技术写作社区 · 工程实践、AI、效率工具</div>
+    <span class="hub-card-tag tag-juejin">技术博客</span>
+  </a>
 
-## 📖 学习
+  <a class="hub-card" href="https://medium.com/@austin.xyz" data-ext>
+    <div class="hub-card-icon">✒️</div>
+    <div class="hub-card-title">Medium</div>
+    <div class="hub-card-desc">英文长文 · 技术深度文章与观点</div>
+    <span class="hub-card-tag tag-medium">技术博客</span>
+  </a>
 
-AI · 技术 · 成长
+  <a class="hub-card" href="https://www.linkedin.com/in/austin-xyz/" data-ext>
+    <div class="hub-card-icon">👔</div>
+    <div class="hub-card-title">LinkedIn</div>
+    <div class="hub-card-desc">职业经历 · 工作动态 · 行业网络</div>
+    <span class="hub-card-tag tag-linkedin">职场</span>
+  </a>
 
-| 名称 | 类型 | 简介 |
-|------|------|------|
-| [[llm/wiki/\|🤖 AI / LLM 知识库]] | 知识库 | LLM 原理、提示词工程、Agent 构建（即将建立）|
-| [🌱 Growing](https://github.com/austinxyz/growing) | 编程项目 | 成长记录与跟踪 |
-| [💻 技术博客](https://austinxyz.github.io) | 博客 | 编程、工具、AI 实践 · GitHub Pages |
+  <a class="hub-card" href="https://github.com/austinxyz" data-ext>
+    <div class="hub-card-icon">🐙</div>
+    <div class="hub-card-title">GitHub</div>
+    <div class="hub-card-desc">开源项目 · 代码仓库 · 实验性工具</div>
+    <span class="hub-card-tag tag-github">代码</span>
+  </a>
+</div>
 
----
+<div class="hub-section">
+  <h2>🏠 生活</h2>
+  <span class="hub-section-desc">家庭财务 · 投资理财 · 照片</span>
+</div>
 
-## 🎮 娱乐
+<div class="hub-grid">
+  <a class="hub-card" href="/wealth/wiki/00-MOC-总览">
+    <div class="hub-card-icon">💰</div>
+    <div class="hub-card-title">财富知识库</div>
+    <div class="hub-card-desc">账户类型 · 税务策略 · 退休规划 · 中美对比</div>
+    <span class="hub-card-tag">130+ 条目</span>
+  </a>
 
-运动 · 兴趣爱好
+  <a class="hub-card" href="http://10.0.0.20:3000" data-ext>
+    <div class="hub-card-icon">📈</div>
+    <div class="hub-card-title">Finance</div>
+    <div class="hub-card-desc">个人财务分析工具，预算追踪、投资组合管理</div>
+    <span class="hub-card-tag tag-ext">编程项目</span>
+  </a>
 
-| 名称 | 类型 | 简介 |
-|------|------|------|
-| [🎾 Tennis](https://github.com/austinxyz/tennis) | 编程项目 | 网球训练数据记录 |
-| ✍️ 个人博客 | 博客 | 生活、思考、记录（待建）|
+  <a class="hub-card" href="#" data-ext>
+    <div class="hub-card-icon">📊</div>
+    <div class="hub-card-title">Stock</div>
+    <div class="hub-card-desc">股票分析工具，量化策略与回测</div>
+    <span class="hub-card-tag tag-wip">规划中</span>
+  </a>
 
----
+  <a class="hub-card" href="http://10.0.0.20:2283" data-ext>
+    <div class="hub-card-icon">🖼️</div>
+    <div class="hub-card-title">Immich 照片</div>
+    <div class="hub-card-desc">家庭照片库，智能识别与时间线浏览 · 内网访问</div>
+    <span class="hub-card-tag tag-ext">媒体</span>
+  </a>
+</div>
 
-## 📝 笔记
+<div class="hub-section">
+  <h2>💼 工作</h2>
+  <span class="hub-section-desc">求职 · 职业规划</span>
+</div>
 
-> 外部系统，不在 Quartz 内管理
+<div class="hub-grid">
+  <a class="hub-card" href="/job/wiki/">
+    <div class="hub-card-icon">🎯</div>
+    <div class="hub-card-title">求职知识库</div>
+    <div class="hub-card-desc">面试准备 · 简历优化 · 谈薪策略 · 行业研究</div>
+    <span class="hub-card-tag">知识库</span>
+  </a>
+</div>
 
-- **Notion**：云端日常捕捉，跨设备同步
-- **Obsidian**：本地知识加工，各知识库独立 Vault
+<div class="hub-section">
+  <h2>📖 学习</h2>
+  <span class="hub-section-desc">AI · 技术 · 成长</span>
+</div>
 
----
+<div class="hub-grid">
+  <a class="hub-card" href="/llm/wiki/">
+    <div class="hub-card-icon">🤖</div>
+    <div class="hub-card-title">AI / LLM 知识库</div>
+    <div class="hub-card-desc">LLM 原理 · 提示词工程 · Agent 构建</div>
+    <span class="hub-card-tag tag-wip">即将建立</span>
+  </a>
 
-## 🔍 使用提示
+  <a class="hub-card" href="http://10.0.0.20:3001" data-ext>
+    <div class="hub-card-icon">🌱</div>
+    <div class="hub-card-title">Growing</div>
+    <div class="hub-card-desc">学习，求职</div>
+    <span class="hub-card-tag tag-ext">编程项目</span>
+  </a>
 
-| 功能 | 用法 |
-|------|------|
-| 全文搜索 | 顶部搜索框（中英文都支持）|
-| 暗色模式 | 左侧面板切换 |
-| 知识图谱 | 右侧面板可视化 |
-| 反向链接 | 右下角显示引用关系 |
-| 快速导航 | 左侧 Explorer 面板 |
+  <a class="hub-card" href="https://austinxyz.github.io/blogs/" data-ext>
+    <div class="hub-card-icon">💻</div>
+    <div class="hub-card-title">技术博客</div>
+    <div class="hub-card-desc">编程、工具、AI 实践 · GitHub Pages</div>
+    <span class="hub-card-tag tag-ext">博客</span>
+  </a>
+</div>
+
+<div class="hub-section">
+  <h2>🎮 娱乐</h2>
+  <span class="hub-section-desc">运动 · 兴趣爱好</span>
+</div>
+
+<div class="hub-grid">
+  <a class="hub-card" href="https://tennis-lineup.fly.dev/" data-ext>
+    <div class="hub-card-icon">🎾</div>
+    <div class="hub-card-title">Tennis</div>
+    <div class="hub-card-desc">网球训练数据记录与分析</div>
+    <span class="hub-card-tag tag-ext">编程项目</span>
+  </a>
+
+  <a class="hub-card" href="#">
+    <div class="hub-card-icon">✍️</div>
+    <div class="hub-card-title">个人博客</div>
+    <div class="hub-card-desc">生活、思考、记录</div>
+    <span class="hub-card-tag tag-wip">待建</span>
+  </a>
+</div>
+
+<div class="hub-notes">
+  <h3>📝 笔记系统</h3>
+  <ul>
+    <li><strong>Notion</strong> — 云端日常捕捉，跨设备同步</li>
+    <li><strong>Obsidian</strong> — 本地知识加工，各知识库独立 Vault</li>
+  </ul>
+</div>
+
+<div class="hub-notes">
+  <h3>🔍 使用提示</h3>
+  <ul>
+    <li>左侧搜索框支持中英文全文检索</li>
+    <li>左侧 Explorer 浏览所有知识库</li>
+    <li>右侧 Graph 查看知识图谱与反向链接</li>
+    <li>页面右上角切换暗色模式</li>
+  </ul>
+</div>

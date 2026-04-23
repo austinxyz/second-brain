@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { KBLinkRewrite } from "./quartz/plugins/transformers/kbLinkRewrite"
 
 /**
  * Austin 的第二大脑 — Hub Quartz 配置
@@ -75,9 +76,17 @@ const config: QuartzConfig = {
         keepBackground: false,
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      // 必须在 OFM 之后、CrawlLinks 之前：给各 KB 内带路径的 wikilink 自动补前缀
+      KBLinkRewrite(),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markBroken: true }),
+      Plugin.CrawlLinks({
+        markBroken: true,
+        // shortest: 用 Obsidian 风格解析——按文件名/路径片段全站搜索最短匹配
+        // 关键作用：让各 KB（wealth/job/llm）原本独立站点的相对/绝对链接
+        // 在嵌入 Hub 后无需改动即可正常工作
+        markdownLinkResolution: "shortest",
+      }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],

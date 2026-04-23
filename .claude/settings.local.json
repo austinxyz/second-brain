@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git branch *)",
+      "Bash(git push *)",
+      "Bash(docker --version)",
+      "Bash(docker info *)",
+      "Bash(docker buildx *)",
+      "Bash(cmd *)",
+      "Bash(docker version *)",
+      "Bash(tee /tmp/hub-build.log)",
+      "Bash(docker-credential-desktop get *)",
+      "Bash(tee /tmp/hub-build2.log)",
+      "Bash(tee /tmp/hub-build3.log)",
+      "Bash(mkdir -p .claude/skills/git-commit-push)",
+      "Bash(cp /c/Users/lorra/projects/personal/wealth/.claude/skills/git-commit-push/SKILL.md .claude/skills/git-commit-push/)",
+      "Bash(git add *)"
+    ]
+  }
+}

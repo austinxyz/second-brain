@@ -1,11 +1,17 @@
 services:
   quartz:
-    image: ${DOCKER_HUB_USER:-austinxyz}/hub-wiki:latest
+    image: ${DOCKER_HUB_USER:-xuaustin}/hub-wiki:latest
     container_name: hub-quartz
     restart: unless-stopped
     ports:
-      - "${BIND_IP:-0.0.0.0}:${WEB_PORT:-8080}:8080"
+      - "${BIND_IP:-0.0.0.0}:${WEB_PORT:-9999}:8080"
     volumes:
+      # Hub 壳层（index.md / blog / projects）——NAS 上为唯一真源
+      # 注意：父层必须 rw，否则 Docker 无法在里面创建 wealth/job/llm 子挂载点
+      # Quartz 运行时不写 /app/content（只写 /app/public），rw 在实际运行上等价于 ro
+      - ${HUB_CONTENT:-/volume1/docker/second-brain/content}:/app/content
+
+      # 各 KB 内容（叠加挂载到 Hub 壳层之上）
       # wealth KB
       - ${WEALTH_RAW:-/volume1/docker/wealth/content/raw_material}:/app/content/wealth/raw_material:ro
       - ${WEALTH_WIKI:-/volume1/docker/wealth/content/wiki}:/app/content/wealth/wiki:ro

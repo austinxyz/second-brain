@@ -1,0 +1,55 @@
+services:
+  hub-quartz:
+    # ─────────────────────────────────────────────
+    # 镜像：先在本机运行 build-and-push.sh 推送到 Docker Hub
+    # ─────────────────────────────────────────────
+    image: austinxyz/hub-wiki:latest
+    container_name: hub-quartz
+    restart: unless-stopped
+
+    ports:
+      # Hub 内网访问端口，浏览器打开 http://NAS_IP:9999
+      - "0.0.0.0:9999:8080"
+
+    volumes:
+      # ─────────────────────────────────────────────
+      # Hub 自有内容（本机 sync 到 NAS 的目录）
+      # 路径替换为 NAS 上实际接收 sync 的位置
+      # ─────────────────────────────────────────────
+      - /volume1/docker/second-brain/content/index.md:/app/content/index.md
+      - /volume1/docker/second-brain/content/projects:/app/content/projects:ro
+      - /volume1/docker/second-brain/content/blog:/app/content/blog:ro
+
+      # ─────────────────────────────────────────────
+      # Wealth 知识库
+      # 将下方路径替换为 NAS 上实际同步的目录
+      # ─────────────────────────────────────────────
+      - /volume1/docker/wealth/content/raw_material:/app/content/wealth/raw_material:ro
+      - /volume1/docker/wealth/content/wiki:/app/content/wealth/wiki:ro
+      - /volume1/docker/wealth/content/output:/app/content/wealth/output:ro
+
+      # ─────────────────────────────────────────────
+      # Job 知识库（已准备好后取消注释）
+      # ─────────────────────────────────────────────
+      # - /volume1/docker/job/content/wiki:/app/content/job/wiki:ro
+
+      # ─────────────────────────────────────────────
+      # LLM 知识库（建好后取消注释）
+      # ─────────────────────────────────────────────
+      # - /volume1/docker/llm/content/wiki:/app/content/llm/wiki:ro
+
+    environment:
+      - NODE_ENV=production
+      - TZ=Asia/Shanghai
+
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"require('http').get('http://localhost:8080', r => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))\""]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      # 首次启动 Quartz 构建约需 2-3 分钟
+      start_period: 180s
+
+networks:
+  default:
+    name: hub-net

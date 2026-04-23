@@ -15,12 +15,12 @@ RUN git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git . \
 COPY quartz.config.ts ./
 COPY quartz.layout.ts ./
 
-# 复制 Hub 自有内容（首页、projects、blog）
-# 各 KB 内容在 NAS 上通过 volume 挂载，不在镜像内
+# 复制 Hub 自定义 Quartz 插件（处理 KB 嵌入后的 wikilink 路径）
+COPY infra/hub/quartz-plugins/kbLinkRewrite.ts ./quartz/plugins/transformers/
+
+# 内容（index.md / blog / projects / 各 KB）全部通过 NAS volume 挂载到 /app/content
+# 镜像只保留空 content 目录，由 docker-compose.nas.yml 挂载真源
 RUN mkdir -p content
-COPY content/index.md ./content/
-COPY content/projects/ ./content/projects/
-COPY content/blog/ ./content/blog/
 
 EXPOSE 8080
 
