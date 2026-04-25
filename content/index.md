@@ -267,7 +267,7 @@ title: Austin 的第二大脑
 
 <div class="hub-section">
   <h2>🏠 生活</h2>
-  <span class="hub-section-desc">家庭财务 · 投资理财 · 照片</span>
+  <span class="hub-section-desc">家庭财务 · 投资理财 · 照片 · 日志</span>
 </div>
 
 <div class="hub-grid">
@@ -300,6 +300,13 @@ title: Austin 的第二大脑
     <div class="hub-card-title">Immich 照片</div>
     <div class="hub-card-desc">家庭照片库，智能识别与时间线浏览 · 内网访问</div>
     <span class="hub-card-tag tag-ext">媒体</span>
+  </a>
+
+  <a class="hub-card" href="/journal/">
+    <div class="hub-card-icon">✍️</div>
+    <div class="hub-card-title">Journal</div>
+    <div class="hub-card-desc">生活感悟 · 旅行 · 访谈 · 设计人生</div>
+    <span class="hub-card-tag">日志</span>
   </a>
 </div>
 
@@ -370,13 +377,6 @@ title: Austin 的第二大脑
     </a>
     <a class="hub-card-repo" href="https://github.com/austinxyz/tennis-lineup" title="源码仓库">🐙 GitHub</a>
   </div>
-
-  <a class="hub-card" href="/journal/">
-    <div class="hub-card-icon">✍️</div>
-    <div class="hub-card-title">Journal</div>
-    <div class="hub-card-desc">生活感悟 · 旅行 · 访谈 · 设计人生</div>
-    <span class="hub-card-tag">日志</span>
-  </a>
 </div>
 
 <div class="hub-notes">
