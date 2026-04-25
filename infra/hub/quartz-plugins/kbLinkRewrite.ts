@@ -6,7 +6,7 @@ import type { VFile } from "vfile"
 /**
  * KBLinkRewrite — 让嵌入 Hub 的独立 KB 站点的内部 wikilink 正常工作
  *
- * 背景：wealth / job / llm 各自原本是独立 Quartz 站点，内部 wikilink 按"vault 根"写。
+ * 背景：wealth / job / ai / stock / journal / leadership 各自原本是独立 Quartz 站点，内部 wikilink 按"vault 根"写。
  * 嵌入 Hub 后，Quartz 的 "shortest" 策略只匹配单文件名，对带路径的 wikilink
  * （如 `[[output/xxx/yyy]]`、`[[账户类型/00-MOC-账户类型]]`）无能为力，
  * 退化为 absolute 解析 → 站根 → 404。

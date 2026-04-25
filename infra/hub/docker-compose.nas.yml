@@ -32,9 +32,6 @@ services:
       # journal KB (private)
       - ${JOURNAL_CONTENT:-/volume1/docker/journal/content}:/app/content/journal:ro
 
-      # - ${JOB_RAW:-/volume1/docker/job/content/raw_material}:/app/content/job/raw_material:ro
-      # - ${JOB_OUTPUT:-/volume1/docker/job/content/experience}:/app/content/job/experience:ro
-
       # ai KB
       - ${AI_RAW:-/volume1/docker/ai/raw}:/app/content/ai/raw:ro
       - ${AI_WIKI:-/volume1/docker/ai/wiki}:/app/content/ai/wiki:ro

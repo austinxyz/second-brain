@@ -3,13 +3,13 @@ services:
     # ─────────────────────────────────────────────
     # 镜像：先在本机运行 build-and-push.sh 推送到 Docker Hub
     # ─────────────────────────────────────────────
-    image: austinxyz/hub-wiki:latest
+    image: xuaustin/hub-wiki:latest
     container_name: hub-quartz
     restart: unless-stopped
 
     ports:
       # Hub 内网访问端口，浏览器打开 http://NAS_IP:9999
-      - "0.0.0.0:9999:8080"
+      - "0.0.0.0:7777:8080"
 
     volumes:
       # ─────────────────────────────────────────────
