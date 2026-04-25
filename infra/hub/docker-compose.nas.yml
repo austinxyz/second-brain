@@ -4,7 +4,7 @@ services:
     container_name: hub-quartz
     restart: unless-stopped
     ports:
-      - "${BIND_IP:-0.0.0.0}:${WEB_PORT:-9999}:8080"
+      - "${BIND_IP:-0.0.0.0}:${WEB_PORT:-7777}:8080"
     volumes:
       # Hub 壳层（index.md / blog / projects）——NAS 上为唯一真源
       # 注意：父层必须 rw，否则 Docker 无法在里面创建 wealth/job/llm 子挂载点
@@ -17,8 +17,14 @@ services:
       - ${WEALTH_WIKI:-/volume1/docker/wealth/content/wiki}:/app/content/wealth/wiki:ro
       - ${WEALTH_OUTPUT:-/volume1/docker/wealth/content/output}:/app/content/wealth/output:ro
 
-      # job KB
-      - ${JOB_WIKI:-/volume1/docker/job/content/wiki}:/app/content/job/wiki:ro
+      # job KB      
+      - /volume1/docker/job/content/skills:/app/content/job/skills:ro
+      - /volume1/docker/job/content/experience:/app/content/job/experience:ro
+      - /volume1/docker/job/content/raw_material:/app/content/job/raw_material:ro
+      - /volume1/docker/job/content/daily:/app/content/job/daily:ro
+      - /volume1/docker/job/content/jobs:/app/content/job/jobs:ro
+      - /volume1/docker/job/content/_meta:/app/content/job/_meta:ro
+      - /volume1/docker/job/content/positions:/app/content/job/positions:ro
 
       # stock KB
       - ${STOCK_WIKI:-/volume1/docker/stock/content/wiki}:/app/content/stock/wiki:ro
@@ -26,8 +32,17 @@ services:
       # journal KB (private)
       - ${JOURNAL_CONTENT:-/volume1/docker/journal/content}:/app/content/journal:ro
 
-      # llm KB（待建，注释解开即可启用）
-      # - ${LLM_WIKI:-/volume1/docker/llm/content/wiki}:/app/content/llm/wiki:ro
+      # - ${JOB_RAW:-/volume1/docker/job/content/raw_material}:/app/content/job/raw_material:ro
+      # - ${JOB_OUTPUT:-/volume1/docker/job/content/experience}:/app/content/job/experience:ro
+
+      # ai KB
+      - ${AI_RAW:-/volume1/docker/ai/raw}:/app/content/ai/raw:ro
+      - ${AI_WIKI:-/volume1/docker/ai/wiki}:/app/content/ai/wiki:ro
+
+      # leadership KB
+      - ${LEADERSHIP_RAW:-/volume1/docker/leadership/raw_material}:/app/content/leadership/raw_material:ro
+      - ${LEADERSHIP_WIKI:-/volume1/docker/leadership/wiki}:/app/content/leadership/wiki:ro
+      - ${LEADERSHIP_OUTPUT:-/volume1/docker/leadership/output}:/app/content/leadership/output:ro
     environment:
       - NODE_ENV=production
       - TZ=${TZ:-Asia/Shanghai}

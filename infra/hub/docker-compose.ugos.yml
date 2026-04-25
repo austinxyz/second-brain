@@ -44,9 +44,17 @@ services:
       - /volume1/docker/journal/content:/app/content/journal:ro
 
       # ─────────────────────────────────────────────
-      # LLM 知识库（建好后取消注释）
+      # AI 知识库
       # ─────────────────────────────────────────────
-      # - /volume1/docker/llm/content/wiki:/app/content/llm/wiki:ro
+      - /volume1/docker/ai/raw:/app/content/ai/raw:ro
+      - /volume1/docker/ai/wiki:/app/content/ai/wiki:ro
+
+      # ─────────────────────────────────────────────
+      # Leadership 知识库
+      # ─────────────────────────────────────────────
+      - /volume1/docker/leadership/raw_material:/app/content/leadership/raw_material:ro
+      - /volume1/docker/leadership/wiki:/app/content/leadership/wiki:ro
+      - /volume1/docker/leadership/output:/app/content/leadership/output:ro
 
     environment:
       - NODE_ENV=production

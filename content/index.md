@@ -309,10 +309,17 @@ title: Austin 的第二大脑
 </div>
 
 <div class="hub-grid">
-  <a class="hub-card" href="/job/wiki/">
+  <a class="hub-card" href="/job/skills/">
     <div class="hub-card-icon">🎯</div>
     <div class="hub-card-title">求职知识库</div>
     <div class="hub-card-desc">面试准备 · 简历优化 · 谈薪策略 · 行业研究</div>
+    <span class="hub-card-tag">知识库</span>
+  </a>
+
+  <a class="hub-card" href="/leadership/wiki/">
+    <div class="hub-card-icon">🧭</div>
+    <div class="hub-card-title">Leadership 知识库</div>
+    <div class="hub-card-desc">管理框架 · 团队建设 · 向上管理 · 领导力实践</div>
     <span class="hub-card-tag">知识库</span>
   </a>
 </div>
@@ -323,11 +330,11 @@ title: Austin 的第二大脑
 </div>
 
 <div class="hub-grid">
-  <a class="hub-card" href="/llm/wiki/">
+  <a class="hub-card" href="/ai/wiki/">
     <div class="hub-card-icon">🤖</div>
-    <div class="hub-card-title">AI / LLM 知识库</div>
-    <div class="hub-card-desc">LLM 原理 · 提示词工程 · Agent 构建</div>
-    <span class="hub-card-tag tag-wip">即将建立</span>
+    <div class="hub-card-title">AI 知识库</div>
+    <div class="hub-card-desc">模型原理 · Agentic 系统 · RAG · AI 基础设施</div>
+    <span class="hub-card-tag">知识库</span>
   </a>
 
   <div class="hub-card-wrap">
