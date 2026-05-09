@@ -28,6 +28,7 @@ services:
 
       # stock KB
       - ${STOCK_WIKI:-/volume1/docker/stock/content/wiki}:/app/content/stock/wiki:ro
+      - ${STOCK_OUTPUTS:-/volume1/docker/stock/content/outputs}:/app/content/stock/outputs:ro
 
       # journal KB (private)
       - ${JOURNAL_CONTENT:-/volume1/docker/journal/content}:/app/content/journal:ro

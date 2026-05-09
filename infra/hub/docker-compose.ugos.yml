@@ -37,6 +37,7 @@ services:
       # Stock 知识库
       # ─────────────────────────────────────────────
       - /volume1/docker/stock/content/wiki:/app/content/stock/wiki:ro
+      - /volume1/docker/stock/content/outputs:/app/content/stock/outputs:ro
 
       # ─────────────────────────────────────────────
       # Journal 知识库（私人博客）

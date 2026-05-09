@@ -26,6 +26,7 @@ const config: QuartzConfig = {
       "infra/**",
       // 各 KB 的敏感 output 子目录
       "wealth/output/账户凭证/**",
+      // ai-infra-manager KB：_templates 不挂载，无需 ignore
     ],
     defaultDateType: "modified",
     theme: {

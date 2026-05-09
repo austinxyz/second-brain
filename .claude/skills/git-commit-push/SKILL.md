@@ -26,10 +26,19 @@ Follow conventional commits format:
 - `test:` - Test updates
 - `chore:` - Build/tool updates
 
+Example:
+```
+feat: add Kubernetes GPU scheduling skill note and book-reader skill
+
+- Distill Jimmy Song's GPU infra book into structured reading notes
+- Create book-reader skill for reusable online book processing
+- Add raw material notes per section under raw_material/books/gpu-infra/
+```
+
 ## GitHub Repository
 
 - **Username**: austinxyz
-- **Repository**: https://github.com/austinxyz/wealth-llm-wiki.git
+- **Repository**: https://github.com/austinxyz/second-brain.git
 - **Branch**: main
 
 ## What Gets Committed
@@ -38,4 +47,4 @@ Follow conventional commits format:
 - New files (untracked files)
 - Deleted files
 
-**Note**: Files listed in `.gitignore` are automatically excluded (including `output/` directory with personal data).
+**Note**: Files listed in `.gitignore` are automatically excluded.
