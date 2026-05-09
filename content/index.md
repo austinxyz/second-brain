@@ -288,6 +288,13 @@ title: Austin 的第二大脑
     <a class="hub-card-repo" href="https://github.com/austinxyz/finance" title="源码仓库">🐙 GitHub</a>
   </div>
 
+  <a class="hub-card" href="http://10.0.0.20:8910/wiki" data-ext>
+    <div class="hub-card-icon">🤖</div>
+    <div class="hub-card-title">财务 Agent</div>
+    <div class="hub-card-desc">家庭财务智能助手 · 内网访问</div>
+    <span class="hub-card-tag tag-ext">内网</span>
+  </a>
+
   <a class="hub-card" href="/stock/wiki/">
     <div class="hub-card-icon">📊</div>
     <div class="hub-card-title">股票知识库</div>
@@ -307,6 +314,13 @@ title: Austin 的第二大脑
     <div class="hub-card-title">Journal</div>
     <div class="hub-card-desc">生活感悟 · 旅行 · 访谈 · 设计人生</div>
     <span class="hub-card-tag">日志</span>
+  </a>
+
+  <a class="hub-card" href="http://10.0.0.20:7788" data-ext>
+    <div class="hub-card-icon">👥</div>
+    <div class="hub-card-title">人脉网</div>
+    <div class="hub-card-desc">朋友 · 同事 · 同学 · 互动记录 · 主题盘点</div>
+    <span class="hub-card-tag tag-ext">内网</span>
   </a>
 </div>
 
