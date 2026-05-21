@@ -41,6 +41,10 @@ services:
       - ${LEADERSHIP_RAW:-/volume1/docker/leadership/raw_material}:/app/content/leadership/raw_material:ro
       - ${LEADERSHIP_WIKI:-/volume1/docker/leadership/wiki}:/app/content/leadership/wiki:ro
       - ${LEADERSHIP_OUTPUT:-/volume1/docker/leadership/output}:/app/content/leadership/output:ro
+
+      # ai-research KB（研究输出 + 项目任务追踪）
+      - ${AI_RESEARCH_OUTPUTS:-/volume1/docker/ai-research/outputs}:/app/content/ai-research/outputs:ro
+      - ${AI_RESEARCH_PROJECTS:-/volume1/docker/ai-research/projects}:/app/content/ai-research/projects:ro
     environment:
       - NODE_ENV=production
       - TZ=${TZ:-Asia/Shanghai}

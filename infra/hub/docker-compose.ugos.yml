@@ -57,6 +57,12 @@ services:
       - /volume1/docker/leadership/wiki:/app/content/leadership/wiki:ro
       - /volume1/docker/leadership/output:/app/content/leadership/output:ro
 
+      # ─────────────────────────────────────────────
+      # ai-research KB（研究输出 + 项目任务追踪）
+      # ─────────────────────────────────────────────
+      - /volume1/docker/ai-research/outputs:/app/content/ai-research/outputs:ro
+      - /volume1/docker/ai-research/projects:/app/content/ai-research/projects:ro
+
     environment:
       - NODE_ENV=production
       - TZ=Asia/Shanghai

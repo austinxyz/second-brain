@@ -343,6 +343,16 @@ title: Austin 的第二大脑
     <div class="hub-card-desc">管理框架 · 团队建设 · 向上管理 · 领导力实践</div>
     <span class="hub-card-tag">知识库</span>
   </a>
+
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="/ai-research/projects/codearts">
+      <div class="hub-card-icon">🔬</div>
+      <div class="hub-card-title">AI 研究工作台</div>
+      <div class="hub-card-desc">华为 CodeArts 对标研究 · Intelligence Briefs · Research Memos · 2026 咨询项目</div>
+      <span class="hub-card-tag">研究项目</span>
+    </a>
+    <a class="hub-card-repo" href="https://github.com/austinxyz/ai-research" title="源码仓库">🐙 GitHub</a>
+  </div>
 </div>
 
 <div class="hub-section">
