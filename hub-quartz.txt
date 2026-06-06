@@ -1,0 +1,308 @@
+2026-04-25T22:34:41.369890948Z  
+2026-04-25T22:34:41.369933586Z   Quartz v4.5.2  
+2026-04-25T22:34:41.369938020Z  
+2026-04-25T22:34:42.484446750Z  Cleaned output directory `public` in 2ms
+2026-04-25T22:34:42.526093284Z  Found 676 input files from `content` in 42ms
+2026-04-25T22:34:42.529219380Z  Parsing input files using 4 threads
+2026-04-25T22:34:47.256127740Z  Error: 
+2026-04-25T22:34:47.256161540Z  
+2026-04-25T22:34:47.256166935Z   ERROR 
+2026-04-25T22:34:47.256180776Z  
+2026-04-25T22:34:47.256182789Z   
+2026-04-25T22:34:47.256184886Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:34:47.256186951Z  
+2026-04-25T22:34:47.256188484Z   10 |  ... istine-le]]"
+2026-04-25T22:34:47.256190237Z   11 |  ... ]"
+2026-04-25T22:34:47.256191956Z   12 |  ... 
+2026-04-25T22:34:47.256193824Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:34:47.256195794Z  -----------------------------------------^
+2026-04-25T22:34:47.256197478Z   
+2026-04-25T22:34:47.256198999Z    10 |  ... istine-le]]"
+2026-04-25T22:34:47.256200660Z    11 |  ... ]"
+2026-04-25T22:34:47.256202302Z    12 |  ... 
+2026-04-25T22:34:47.256203916Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:34:47.256205679Z   -----------------------------------------^
+2026-04-25T22:34:47.256207408Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:34:47.256209221Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:34:47.256210828Z      at ../processors/parse.ts:115:9
+2026-04-25T22:34:47.256212441Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:34:48.963087646Z  
+2026-04-25T22:34:48.963111404Z   Quartz v4.5.2  
+2026-04-25T22:34:48.963115773Z  
+2026-04-25T22:34:50.154972397Z  Cleaned output directory `public` in 1ms
+2026-04-25T22:34:50.203515591Z  Found 676 input files from `content` in 48ms
+2026-04-25T22:34:50.206577041Z  Parsing input files using 4 threads
+2026-04-25T22:34:54.917070496Z  Error: 
+2026-04-25T22:34:54.917099393Z  
+2026-04-25T22:34:54.917103327Z   ERROR 
+2026-04-25T22:34:54.917106306Z  
+2026-04-25T22:34:54.917109060Z   
+2026-04-25T22:34:54.917111797Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:34:54.917114572Z  
+2026-04-25T22:34:54.917117044Z   10 |  ... istine-le]]"
+2026-04-25T22:34:54.917131276Z   11 |  ... ]"
+2026-04-25T22:34:54.917133988Z   12 |  ... 
+2026-04-25T22:34:54.917135659Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:34:54.917137637Z  -----------------------------------------^
+2026-04-25T22:34:54.917139347Z   
+2026-04-25T22:34:54.917140786Z    10 |  ... istine-le]]"
+2026-04-25T22:34:54.917142272Z    11 |  ... ]"
+2026-04-25T22:34:54.917143701Z    12 |  ... 
+2026-04-25T22:34:54.917145155Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:34:54.917146788Z   -----------------------------------------^
+2026-04-25T22:34:54.917148293Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:34:54.917149871Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:34:54.917151396Z      at ../processors/parse.ts:115:9
+2026-04-25T22:34:54.917152970Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:34:56.441910341Z  
+2026-04-25T22:34:56.441936029Z   Quartz v4.5.2  
+2026-04-25T22:34:56.441939911Z  
+2026-04-25T22:34:57.578307261Z  Cleaned output directory `public` in 1ms
+2026-04-25T22:34:57.617569844Z  Found 676 input files from `content` in 39ms
+2026-04-25T22:34:57.623317496Z  Parsing input files using 4 threads
+2026-04-25T22:35:02.349234378Z  Error: 
+2026-04-25T22:35:02.349264427Z  
+2026-04-25T22:35:02.349269331Z   ERROR 
+2026-04-25T22:35:02.349272597Z  
+2026-04-25T22:35:02.349275322Z   
+2026-04-25T22:35:02.349278174Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:35:02.349281155Z  
+2026-04-25T22:35:02.349283625Z   10 |  ... istine-le]]"
+2026-04-25T22:35:02.349286164Z   11 |  ... ]"
+2026-04-25T22:35:02.349288827Z   12 |  ... 
+2026-04-25T22:35:02.349291465Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:02.349294185Z  -----------------------------------------^
+2026-04-25T22:35:02.349296754Z   
+2026-04-25T22:35:02.349299213Z    10 |  ... istine-le]]"
+2026-04-25T22:35:02.349301731Z    11 |  ... ]"
+2026-04-25T22:35:02.349304205Z    12 |  ... 
+2026-04-25T22:35:02.349306685Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:02.349309528Z   -----------------------------------------^
+2026-04-25T22:35:02.349312384Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:35:02.349315278Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:35:02.349332284Z      at ../processors/parse.ts:115:9
+2026-04-25T22:35:02.349335293Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:35:03.938754436Z  
+2026-04-25T22:35:03.938778707Z   Quartz v4.5.2  
+2026-04-25T22:35:03.938782750Z  
+2026-04-25T22:35:05.076517173Z  Cleaned output directory `public` in 2ms
+2026-04-25T22:35:05.124707042Z  Found 676 input files from `content` in 48ms
+2026-04-25T22:35:05.127639825Z  Parsing input files using 4 threads
+2026-04-25T22:35:09.491307649Z  Error: 
+2026-04-25T22:35:09.491337428Z  
+2026-04-25T22:35:09.491340419Z   ERROR 
+2026-04-25T22:35:09.491342782Z  
+2026-04-25T22:35:09.491344602Z   
+2026-04-25T22:35:09.491346581Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:35:09.491349013Z  
+2026-04-25T22:35:09.491351099Z   10 |  ... istine-le]]"
+2026-04-25T22:35:09.491353141Z   11 |  ... ]"
+2026-04-25T22:35:09.491355263Z   12 |  ... 
+2026-04-25T22:35:09.491357494Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:09.491359931Z  -----------------------------------------^
+2026-04-25T22:35:09.491361911Z   
+2026-04-25T22:35:09.491363599Z    10 |  ... istine-le]]"
+2026-04-25T22:35:09.491365840Z    11 |  ... ]"
+2026-04-25T22:35:09.491368054Z    12 |  ... 
+2026-04-25T22:35:09.491402096Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:09.491433720Z   -----------------------------------------^
+2026-04-25T22:35:09.491440388Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:35:09.491444052Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:35:09.491446760Z      at ../processors/parse.ts:115:9
+2026-04-25T22:35:09.491449500Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:35:11.640020379Z  
+2026-04-25T22:35:11.640046016Z   Quartz v4.5.2  
+2026-04-25T22:35:11.640050249Z  
+2026-04-25T22:35:12.820984026Z  Cleaned output directory `public` in 1ms
+2026-04-25T22:35:12.869918469Z  Found 676 input files from `content` in 49ms
+2026-04-25T22:35:12.872941309Z  Parsing input files using 4 threads
+2026-04-25T22:35:17.603649987Z  Error: 
+2026-04-25T22:35:17.603681690Z  
+2026-04-25T22:35:17.603684956Z   ERROR 
+2026-04-25T22:35:17.603687210Z  
+2026-04-25T22:35:17.603689710Z   
+2026-04-25T22:35:17.603700553Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:35:17.603715909Z  
+2026-04-25T22:35:17.603717705Z   10 |  ... istine-le]]"
+2026-04-25T22:35:17.603719777Z   11 |  ... ]"
+2026-04-25T22:35:17.603721466Z   12 |  ... 
+2026-04-25T22:35:17.603723366Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:17.603725577Z  -----------------------------------------^
+2026-04-25T22:35:17.603727730Z   
+2026-04-25T22:35:17.603729557Z    10 |  ... istine-le]]"
+2026-04-25T22:35:17.603731501Z    11 |  ... ]"
+2026-04-25T22:35:17.603733235Z    12 |  ... 
+2026-04-25T22:35:17.603735182Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:17.603737296Z   -----------------------------------------^
+2026-04-25T22:35:17.603739133Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:35:17.603741252Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:35:17.603743206Z      at ../processors/parse.ts:115:9
+2026-04-25T22:35:17.603745067Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:35:20.528205193Z  
+2026-04-25T22:35:20.528234536Z   Quartz v4.5.2  
+2026-04-25T22:35:20.528238777Z  
+2026-04-25T22:35:21.649713949Z  Cleaned output directory `public` in 1ms
+2026-04-25T22:35:21.692451263Z  Found 676 input files from `content` in 43ms
+2026-04-25T22:35:21.695497911Z  Parsing input files using 4 threads
+2026-04-25T22:35:26.298267104Z  Error: 
+2026-04-25T22:35:26.298297536Z  
+2026-04-25T22:35:26.298300785Z   ERROR 
+2026-04-25T22:35:26.298303101Z  
+2026-04-25T22:35:26.298305161Z   
+2026-04-25T22:35:26.298307492Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:35:26.298310078Z  
+2026-04-25T22:35:26.298312372Z   10 |  ... istine-le]]"
+2026-04-25T22:35:26.298314530Z   11 |  ... ]"
+2026-04-25T22:35:26.298316818Z   12 |  ... 
+2026-04-25T22:35:26.298319097Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:26.298321627Z  -----------------------------------------^
+2026-04-25T22:35:26.298323891Z   
+2026-04-25T22:35:26.298326104Z    10 |  ... istine-le]]"
+2026-04-25T22:35:26.298328335Z    11 |  ... ]"
+2026-04-25T22:35:26.298330756Z    12 |  ... 
+2026-04-25T22:35:26.298333060Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:26.298335573Z   -----------------------------------------^
+2026-04-25T22:35:26.298337702Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:35:26.298350348Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:35:26.298352178Z      at ../processors/parse.ts:115:9
+2026-04-25T22:35:26.298353911Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:35:30.798221023Z  
+2026-04-25T22:35:30.798247794Z   Quartz v4.5.2  
+2026-04-25T22:35:30.798252208Z  
+2026-04-25T22:35:32.009375112Z  Cleaned output directory `public` in 1ms
+2026-04-25T22:35:32.048972871Z  Found 676 input files from `content` in 39ms
+2026-04-25T22:35:32.052049337Z  Parsing input files using 4 threads
+2026-04-25T22:35:36.750525579Z  Error: 
+2026-04-25T22:35:36.750560506Z  
+2026-04-25T22:35:36.750563711Z   ERROR 
+2026-04-25T22:35:36.750565980Z  
+2026-04-25T22:35:36.750568076Z   
+2026-04-25T22:35:36.750570180Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:35:36.750572704Z  
+2026-04-25T22:35:36.750574816Z   10 |  ... istine-le]]"
+2026-04-25T22:35:36.750577291Z   11 |  ... ]"
+2026-04-25T22:35:36.750579518Z   12 |  ... 
+2026-04-25T22:35:36.750581480Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:36.750583868Z  -----------------------------------------^
+2026-04-25T22:35:36.750585769Z   
+2026-04-25T22:35:36.750587571Z    10 |  ... istine-le]]"
+2026-04-25T22:35:36.750590662Z    11 |  ... ]"
+2026-04-25T22:35:36.750594086Z    12 |  ... 
+2026-04-25T22:35:36.750596345Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:36.750599004Z   -----------------------------------------^
+2026-04-25T22:35:36.750601425Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:35:36.750603728Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:35:36.750606173Z      at ../processors/parse.ts:115:9
+2026-04-25T22:35:36.750608490Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:35:44.453532739Z  
+2026-04-25T22:35:44.453558748Z   Quartz v4.5.2  
+2026-04-25T22:35:44.453563095Z  
+2026-04-25T22:35:45.577440555Z  Cleaned output directory `public` in 2ms
+2026-04-25T22:35:45.644450597Z  Found 676 input files from `content` in 67ms
+2026-04-25T22:35:45.647356593Z  Parsing input files using 4 threads
+2026-04-25T22:35:50.617253840Z  Error: 
+2026-04-25T22:35:50.617281784Z  
+2026-04-25T22:35:50.617284823Z   ERROR 
+2026-04-25T22:35:50.617287189Z  
+2026-04-25T22:35:50.617393746Z   
+2026-04-25T22:35:50.617396661Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:35:50.617398343Z  
+2026-04-25T22:35:50.617399698Z   10 |  ... istine-le]]"
+2026-04-25T22:35:50.617401235Z   11 |  ... ]"
+2026-04-25T22:35:50.617402751Z   12 |  ... 
+2026-04-25T22:35:50.617404184Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:50.617405813Z  -----------------------------------------^
+2026-04-25T22:35:50.617407304Z   
+2026-04-25T22:35:50.617408617Z    10 |  ... istine-le]]"
+2026-04-25T22:35:50.617410077Z    11 |  ... ]"
+2026-04-25T22:35:50.617411577Z    12 |  ... 
+2026-04-25T22:35:50.617413050Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:35:50.617414665Z   -----------------------------------------^
+2026-04-25T22:35:50.617416157Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:35:50.617417766Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:35:50.617419404Z      at ../processors/parse.ts:115:9
+2026-04-25T22:35:50.617421051Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:36:04.677076230Z  
+2026-04-25T22:36:04.677103583Z   Quartz v4.5.2  
+2026-04-25T22:36:04.677107591Z  
+2026-04-25T22:36:05.913677965Z  Cleaned output directory `public` in 1ms
+2026-04-25T22:36:05.952894573Z  Found 676 input files from `content` in 39ms
+2026-04-25T22:36:05.955911313Z  Parsing input files using 4 threads
+2026-04-25T22:36:10.355363197Z  Error: 
+2026-04-25T22:36:10.355396841Z  
+2026-04-25T22:36:10.355399825Z   ERROR 
+2026-04-25T22:36:10.355419946Z  
+2026-04-25T22:36:10.355422421Z   
+2026-04-25T22:36:10.355424720Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:36:10.355427434Z  
+2026-04-25T22:36:10.355429295Z   10 |  ... istine-le]]"
+2026-04-25T22:36:10.355431632Z   11 |  ... ]"
+2026-04-25T22:36:10.355433805Z   12 |  ... 
+2026-04-25T22:36:10.355435665Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:36:10.355438051Z  -----------------------------------------^
+2026-04-25T22:36:10.355440031Z   
+2026-04-25T22:36:10.355441876Z    10 |  ... istine-le]]"
+2026-04-25T22:36:10.355443793Z    11 |  ... ]"
+2026-04-25T22:36:10.355445943Z    12 |  ... 
+2026-04-25T22:36:10.355448048Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:36:10.355461160Z   -----------------------------------------^
+2026-04-25T22:36:10.355462926Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:36:10.355464537Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:36:10.355465995Z      at ../processors/parse.ts:115:9
+2026-04-25T22:36:10.355467646Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:36:37.086447798Z  
+2026-04-25T22:36:37.086473831Z   Quartz v4.5.2  
+2026-04-25T22:36:37.086477849Z  
+2026-04-25T22:36:38.238057556Z  Cleaned output directory `public` in 2ms
+2026-04-25T22:36:38.292527796Z  Found 676 input files from `content` in 54ms
+2026-04-25T22:36:38.295784693Z  Parsing input files using 4 threads
+2026-04-25T22:36:42.859895877Z  Error: 
+2026-04-25T22:36:42.859927391Z  
+2026-04-25T22:36:42.859930844Z   ERROR 
+2026-04-25T22:36:42.859933315Z  
+2026-04-25T22:36:42.859944321Z   
+2026-04-25T22:36:42.859946861Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:36:42.859949439Z  
+2026-04-25T22:36:42.859951687Z   10 |  ... istine-le]]"
+2026-04-25T22:36:42.859954145Z   11 |  ... ]"
+2026-04-25T22:36:42.859956429Z   12 |  ... 
+2026-04-25T22:36:42.859958841Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:36:42.859961738Z  -----------------------------------------^
+2026-04-25T22:36:42.859979214Z   
+2026-04-25T22:36:42.859981509Z    10 |  ... istine-le]]"
+2026-04-25T22:36:42.859983906Z    11 |  ... ]"
+2026-04-25T22:36:42.859986331Z    12 |  ... 
+2026-04-25T22:36:42.859988695Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:36:42.859991219Z   -----------------------------------------^
+2026-04-25T22:36:42.859993750Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:36:42.859996451Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:36:42.859998976Z      at ../processors/parse.ts:115:9
+2026-04-25T22:36:42.860001641Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)
+2026-04-25T22:37:35.693095359Z  
+2026-04-25T22:37:35.693125740Z   Quartz v4.5.2  
+2026-04-25T22:37:35.693129953Z  
+2026-04-25T22:37:36.898101743Z  Cleaned output directory `public` in 2ms
+2026-04-25T22:37:36.943194034Z  Found 676 input files from `content` in 46ms
+2026-04-25T22:37:36.946263395Z  Parsing input files using 4 threads
+2026-04-25T22:37:41.481139967Z  Error: 
+2026-04-25T22:37:41.481242895Z  
+2026-04-25T22:37:41.481250792Z   ERROR 
+2026-04-25T22:37:41.481253017Z  
+2026-04-25T22:37:41.481254583Z   
+2026-04-25T22:37:41.481256173Z  Failed to process markdown `content/job/jobs/Pinterest/prep/hr-screen-christine.md`: bad indentation of a sequence entry (13:65)
+2026-04-25T22:37:41.481258007Z  
+2026-04-25T22:37:41.481259402Z   10 |  ... istine-le]]"
+2026-04-25T22:37:41.481260950Z   11 |  ... ]"
+2026-04-25T22:37:41.481262587Z   12 |  ... 
+2026-04-25T22:37:41.481264139Z   13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:37:41.481265847Z  -----------------------------------------^
+2026-04-25T22:37:41.481267348Z   
+2026-04-25T22:37:41.481268763Z    10 |  ... istine-le]]"
+2026-04-25T22:37:41.481270218Z    11 |  ... ]"
+2026-04-25T22:37:41.481271642Z    12 |  ... 
+2026-04-25T22:37:41.481273199Z    13 |  ... 2 Recruiter Screen (Sarah)]]" (lessons from yesterday's AppZe ...
+2026-04-25T22:37:41.481274894Z   -----------------------------------------^
+2026-04-25T22:37:41.481276460Z       at Object.yaml [as parse] (../plugins/transformers/frontmatter.ts:69:35)
+2026-04-25T22:37:41.481278243Z      at trace (../util/trace.ts:37:11)
+2026-04-25T22:37:41.481279726Z      at ../processors/parse.ts:115:9
+2026-04-25T22:37:41.481281227Z      at AsyncFunction.parseMarkdown (../worker.ts:24:10)

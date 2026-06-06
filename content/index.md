@@ -384,6 +384,20 @@ title: Austin 的第二大脑
     <div class="hub-card-desc">编程、工具、AI 实践 · GitHub Pages</div>
     <span class="hub-card-tag tag-ext">博客</span>
   </a>
+
+  <a class="hub-card" href="https://austinxyz.github.io/course-portal" data-ext>
+    <div class="hub-card-icon">🎓</div>
+    <div class="hub-card-title">课程门户</div>
+    <div class="hub-card-desc">Claude Code 系列课程 · 课件、作业、Q&A · GitHub Pages</div>
+    <span class="hub-card-tag tag-ext">课程</span>
+  </a>
+
+  <a class="hub-card" href="https://learn.austinxyz.ai/" data-ext>
+    <div class="hub-card-icon">🚀</div>
+    <div class="hub-card-title">Learn 平台</div>
+    <div class="hub-card-desc">AI 学习平台 · 在线课程与实战练习</div>
+    <span class="hub-card-tag tag-ext">课程</span>
+  </a>
 </div>
 
 <div class="hub-section">
