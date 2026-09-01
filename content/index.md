@@ -322,6 +322,13 @@ title: Austin 的第二大脑
     <div class="hub-card-desc">朋友 · 同事 · 同学 · 互动记录 · 主题盘点</div>
     <span class="hub-card-tag tag-ext">内网</span>
   </a>
+
+  <a class="hub-card" href="https://stock-positions.vercel.app/" data-ext>
+    <div class="hub-card-icon">💹</div>
+    <div class="hub-card-title">股票账户管理</div>
+    <div class="hub-card-desc">持仓追踪 · 账户总览 · 投资组合管理</div>
+    <span class="hub-card-tag tag-ext">编程项目</span>
+  </a>
 </div>
 
 <div class="hub-section">
@@ -398,6 +405,31 @@ title: Austin 的第二大脑
     <div class="hub-card-desc">AI 学习平台 · 在线课程与实战练习</div>
     <span class="hub-card-tag tag-ext">课程</span>
   </a>
+
+  <a class="hub-card" href="https://ai-course-management.vercel.app/students" data-ext>
+    <div class="hub-card-icon">🧑‍🎓</div>
+    <div class="hub-card-title">学员管理系统</div>
+    <div class="hub-card-desc">AI 课程学员信息 · 进度追踪 · 管理后台</div>
+    <span class="hub-card-tag tag-ext">编程项目</span>
+  </a>
+
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="https://github.com/claude-ai-community/group-digest" data-ext>
+      <div class="hub-card-icon">💬</div>
+      <div class="hub-card-title">飞轮实践群精华</div>
+      <div class="hub-card-desc">社群干货沉淀 · 实战案例 · 精华帖归档</div>
+      <span class="hub-card-tag tag-github">GitHub</span>
+    </a>
+  </div>
+
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="https://github.com/claude-ai-community/community" data-ext>
+      <div class="hub-card-icon">🤝</div>
+      <div class="hub-card-title">AI 兴趣小组</div>
+      <div class="hub-card-desc">Claude AI 社区 · 开放协作 · 共建资源</div>
+      <span class="hub-card-tag tag-github">GitHub</span>
+    </a>
+  </div>
 </div>
 
 <div class="hub-section">
@@ -414,6 +446,16 @@ title: Austin 的第二大脑
       <span class="hub-card-tag tag-ext">编程项目</span>
     </a>
     <a class="hub-card-repo" href="https://github.com/austinxyz/tennis-lineup" title="源码仓库">🐙 GitHub</a>
+  </div>
+
+  <div class="hub-card-wrap">
+    <a class="hub-card" href="https://zijing-cup-frontend.vercel.app/" data-ext>
+      <div class="hub-card-icon">🏸</div>
+      <div class="hub-card-title">紫荆杯排阵</div>
+      <div class="hub-card-desc">羽毛球队伍管理 · 赛事排阵 · 选手信息</div>
+      <span class="hub-card-tag tag-ext">编程项目</span>
+    </a>
+    <a class="hub-card-repo" href="https://github.com/austinxyz/zijing-cup" title="源码仓库">🐙 GitHub</a>
   </div>
 </div>
 
