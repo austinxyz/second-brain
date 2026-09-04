@@ -124,6 +124,7 @@ docker compose -f docker-compose.nas.yml up -d
 | [wealth](https://github.com/austinxyz/wealth) | 财富 / 投资 / 退休规划 KB |
 | journal（private） | 个人博客 / 感悟 / 旅行 / 访谈 / 设计人生 |
 | job / stock / llm | 各自独立 KB（私有或未公开） |
+| daughter-college（private） | 女儿大学申请 KB — 选校策略、文书、时间轴、资料整理 |
 
 ## 许可
 

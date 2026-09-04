@@ -45,6 +45,10 @@ services:
       # ai-research KB（研究输出 + 项目任务追踪）
       - /volume1/docker/ai-research/outputs:/app/content/ai-research/outputs:ro
       - /volume1/docker/ai-research/projects:/app/content/ai-research/projects:ro
+
+      # daughter-college KB（女儿大学申请）
+      - ${DAUGHTER_COLLEGE_WIKI:-/volume1/docker/daughter-college/wiki}:/app/content/daughter-college/wiki:ro
+      - ${DAUGHTER_COLLEGE_RAW:-/volume1/docker/daughter-college/raw_material}:/app/content/daughter-college/raw_material:ro
     environment:
       - NODE_ENV=production
       - TZ=${TZ:-Asia/Shanghai}

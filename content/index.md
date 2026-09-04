@@ -363,8 +363,8 @@ title: Austin 的第二大脑
 </div>
 
 <div class="hub-section">
-  <h2>📖 学习</h2>
-  <span class="hub-section-desc">AI · 技术 · 成长</span>
+  <h2>📖 教育</h2>
+  <span class="hub-section-desc">AI · 技术 · 成长 · 升学规划</span>
 </div>
 
 <div class="hub-grid">
@@ -430,6 +430,13 @@ title: Austin 的第二大脑
       <span class="hub-card-tag tag-github">GitHub</span>
     </a>
   </div>
+
+  <a class="hub-card" href="/daughter-college/wiki/">
+    <div class="hub-card-icon">🎓</div>
+    <div class="hub-card-title">女儿大学申请</div>
+    <div class="hub-card-desc">选校策略 · 文书 · 时间轴 · 标化考试 · 资料整理</div>
+    <span class="hub-card-tag">知识库</span>
+  </a>
 </div>
 
 <div class="hub-section">
