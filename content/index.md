@@ -329,6 +329,13 @@ title: Austin 的第二大脑
     <div class="hub-card-desc">持仓追踪 · 账户总览 · 投资组合管理</div>
     <span class="hub-card-tag tag-ext">编程项目</span>
   </a>
+
+  <a class="hub-card" href="https://stock.austinxyz.ai/" data-ext>
+    <div class="hub-card-icon">📉</div>
+    <div class="hub-card-title">Stock</div>
+    <div class="hub-card-desc">股票数据与分析</div>
+    <span class="hub-card-tag tag-ext">编程项目</span>
+  </a>
 </div>
 
 <div class="hub-section">
